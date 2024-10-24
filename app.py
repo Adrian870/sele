@@ -91,132 +91,48 @@ def clicca_link_tariffario(driver):
         logging.error(f"Errore imprevisto: {str(e)}")
 # Funzione per cliccare sul link "Dati della rete micrometeorologica" e accettare i cookie nella nuova pagina
 
-def clicca_dati_decreto_interdirettoriale(driver):
+
+ 
+def salva_nomi (driver): 
     try:
-        # Attendi che il link "Dati della rete micrometeorologica" sia visibile
-        link = WebDriverWait(driver, 10).until(
-              EC.presence_of_element_located((By.CSS_SELECTOR, 'a[aria-label="Decreto interdirettoriale del 23 novembre 2012"]'))
-)
- 
-        # Clicca sul link
-        link.click()
-        logging.info("Link 'Decreto interdirettoriale del 23 novembre 2012 ' cliccato con successo.")
-
-    except NoSuchElementException:
-        logging.error("Il link 'Decreto interdirettoriale del 23 novembre 2012 ' non è stato trovato.")
-    except ElementClickInterceptedException:
-        logging.error("Il click sul link 'Decreto interdirettoriale del 23 novembre 2012 ' è stato bloccato.")
-    except Exception as e:
-        logging.error(f"Errore imprevisto: {str(e)}", exc_info=True)
-
-
-def clicca_dati_circolare_3marzo(driver):
-    try:
-        # Attendi che il link "Dati della rete micrometeorologica" sia visibile
-        link = WebDriverWait(driver, 10).until(
-              EC.presence_of_element_located((By.CSS_SELECTOR, 'a[aria-label="Circolare del Ministero del Lavoro e delle Politiche Sociali del 3 marzo 2015 "]'))
-)
- 
-        # Clicca sul link
-        link.click()
-        logging.info("Link 'Circolare del Ministero del Lavoro e delle Politiche Sociali del 3 marzo 2015 ' cliccato con successo.")
-
-    except NoSuchElementException:
-        logging.error("Il link 'Circolare del Ministero del Lavoro e delle Politiche Sociali del 3 marzo 2015 ' non è stato trovato.")
-    except ElementClickInterceptedException:
-        logging.error("Il click sul link 'Circolare del Ministero del Lavoro e delle Politiche Sociali del 3 marzo 2015 ' è stato bloccato.")
-    except Exception as e:
-        logging.error(f"Errore imprevisto: {str(e)}", exc_info=True)
-
-def clicca_dati_decreto_ministero(driver):
-    try:
-        # Attendi che il link "Dati della rete micrometeorologica" sia visibile
-        link = WebDriverWait(driver, 10).until(
-              EC.presence_of_element_located((By.CSS_SELECTOR, 'a[aria-label="Decreto 14 ottobre 2016 del Ministero dell Ambiente e della Tutela del Territorio e del Mare"]'))
-)
- 
-        # Clicca sul link
-        link.click()
-        logging.info("Link 'Decreto 14 ottobre 2016 del Ministero dell'Ambiente e della Tutela del Territorio e del Mare' cliccato con successo.")
-
-    except NoSuchElementException:
-        logging.error("Il link 'Decreto 14 ottobre 2016 del Ministero dell'Ambiente e della Tutela del Territorio e del Mare' non è stato trovato.")
-    except ElementClickInterceptedException:
-        logging.error("Il click sul link 'Decreto 14 ottobre 2016 del Ministero dell'Ambiente e della Tutela del Territorio e del Mare' è stato bloccato.")
-    except Exception as e:
-        logging.error(f"Errore imprevisto: {str(e)}", exc_info=True)
-  
-
-def clicca_dati_circolare_min(driver):
-    try:
-        # Attendi che il link "Dati della rete micrometeorologica" sia visibile
-        link = WebDriverWait(driver, 10).until(
-              EC.presence_of_element_located((By.CSS_SELECTOR, 'a[aria-label="Circolare del Ministero del Lavoro e delle Politiche Sociali n. 10912 del 24.11.2022"]'))
-)
- 
-        # Clicca sul link
-        link.click()
-        logging.info("Link 'Circolare del Ministero del Lavoro e delle Politiche Sociali n. 10912 del 24.11.2022 ' cliccato con successo.")
-
-    except NoSuchElementException:
-        logging.error("Il link 'Circolare del Ministero del Lavoro e delle Politiche Sociali n. 10912 del 24.11.2022 ' non è stato trovato.")
-    except ElementClickInterceptedException:
-        logging.error("Il click sul link 'Circolare del Ministero del Lavoro e delle Politiche Sociali n. 10912 del 24.11.2022 ' è stato bloccato.")
-    except Exception as e:
-        logging.error(f"Errore imprevisto: {str(e)}", exc_info=True)
-
-def clicca_dati_deliberazione(driver):
-    try:
-        # Attendi che il link "Dati della rete micrometeorologica" sia visibile
-        link = WebDriverWait(driver, 10).until(
-              EC.presence_of_element_located((By.CSS_SELECTOR, 'a[aria-label=" deliberazione n. 14 dell 31.01.2024."]'))
-)
- 
-        # Clicca sul link
-        link.click()
-        logging.info("Link ' deliberazione n. 14 dell'31.01.2024. ' cliccato con successo.")
-
-    except NoSuchElementException:
-        logging.error("Il link ' deliberazione n. 14 dell'31.01.2024. ' non è stato trovato.")
-    except ElementClickInterceptedException:
-        logging.error("Il click sul link ' deliberazione n. 14 dell'31.01.2024. ' è stato bloccato.")
-    except Exception as e:
-        logging.error(f"Errore imprevisto: {str(e)}", exc_info=True)
-
-
-def clicca_dati_tariffario(driver):
-    try:
-        # Attendi che il link "Dati della rete micrometeorologica" sia visibile
-        link = WebDriverWait(driver, 10).until(
-              EC.presence_of_element_located((By.CSS_SELECTOR, 'a[aria-label=" Tariffario 2024"]'))
-)
- 
-        # Clicca sul link
-        link.click()
-        logging.info("Link 'Tariffario 2024 ' cliccato con successo.")
-
-    except NoSuchElementException:
-        logging.error("Il link ' Tariffario 2024 ' non è stato trovato.")
-    except ElementClickInterceptedException:
-        logging.error("Il click sul link ' Tariffario 2024 ' è stato bloccato.")
-    except Exception as e:
-        logging.error(f"Errore imprevisto: {str(e)}", exc_info=True)
-
- 
- 
-def main (driver): 
-    accetta_cookie(driver)
-    clicca_dati_decreto_interdirettoriale(driver)
-    clicca_dati_circolare_3marzo(driver)
-    clicca_dati_decreto_ministero(driver)
-    clicca_dati_circolare_min(driver)
-    clicca_dati_deliberazione(driver)
-    clicca_dati_tariffario(driver)
+        WebDriverWait(driver, 10).until(
+            EC.presence_of_element_located((By.CSS_SELECTOR, 'a[aria-label]')))
     
+        documenti = driver.find_elements(By.CSS_SELECTOR, 'a[aria-label]')
+
+        if documenti:
+            logging.info("Questi sono i documenti: ")
+            for doc in documenti:
+                if ".pdf" in doc.get_attribute("href"):
+                    print(doc.text)
+                
+        else:
+            logging.info("Nessun documento trovato")    
+    except  Exception as e:
+        logging.error (f"Errore imprevisto {str(e)}")
+
+def scarica_doc(driver):
+    try:
+        WebDriverWait(driver, 10).until(
+            EC.presence_of_all_elements_located((By.CSS_SELECTOR, 'a[aria-label]'))
+            )
+        documenti = driver.find_elements(By.CSS_SELECTOR, 'a[aria-label]')
+
+        if documenti: 
+             for doc in documenti:
+                if ".pdf" in doc.get_attribute("href"):
+                    doc.click()
+                    logging.info(f"Scaricato: {doc.text}")
+        else:
+            logging.info("nessun documento trovato")
+    except Exception as e:
+        logging.error(f"Errore imprevisto : {str(e)}")    
 # Esegui le funzioni precedenti e scarica i documenti
 accetta_cookie(driver)
 clicca_bottone_servizi(driver)
 clicca_link_tariffario(driver)
-main(driver)
+accetta_cookie(driver)
+salva_nomi(driver)
+scarica_doc(driver)
 # Chiudi il browser al termine
 driver.quit()
