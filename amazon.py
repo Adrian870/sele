@@ -9,6 +9,7 @@ import logging
 import time
 # Configurazione delogger
 logging.basicConfig(level=logging.INFO)
+
  
 # Percorso del driver di Chrome specifico
 chrome_driver_path = r"C:\Users\user\Desktop\chromedriver-win64\chromedriver-win64\\chromedriver.exe"
